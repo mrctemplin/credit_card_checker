@@ -48,8 +48,8 @@ const validateCred = arr => {
 
 
 // Test functions:
-console.log(validateCred(valid1)); // Should print true
-console.log(validateCred(invalid1)); // Should print false
+// console.log(validateCred(valid1)); // Should print true
+// console.log(validateCred(invalid1)); // Should print false
 
 
 const findInvalidCards = arr => {
@@ -71,8 +71,8 @@ const findInvalidCards = arr => {
 
 
 // Test functions:
-console.log(findInvalidCards([valid1, valid2, valid3, valid4, valid5]));// Shouldn't print anything
-console.log(findInvalidCards([invalid1, invalid2, invalid3, invalid4, invalid5])); // Should print all of the numbers
+// console.log(findInvalidCards([valid1, valid2, valid3, valid4, valid5]));// Shouldn't print anything
+// console.log(findInvalidCards([invalid1, invalid2, invalid3, invalid4, invalid5])); // Should print all of the numbers
 
 
 const idInvalidCardCompanies = arr => {
@@ -117,11 +117,26 @@ const idInvalidCardCompanies = arr => {
 
 
 // Test functions:
-console.log(idInvalidCardCompanies([invalid1])); // Should print['visa']
-console.log(idInvalidCardCompanies([invalid2])); // Should print ['mastercard']
-console.log(idInvalidCardCompanies(batch)); // Should print ['Visa', 'Mastercard', 'Amex', 'Discover']
+// console.log(idInvalidCardCompanies([invalid1])); // Should print['visa']
+// console.log(idInvalidCardCompanies([invalid2])); // Should print ['mastercard']
+// console.log(idInvalidCardCompanies(batch)); // Should print ['Visa', 'Mastercard', 'Amex', 'Discover']
 
 // Next steps:
 // 1. Use different credit card numbers from a credit card number generator and validator site and test if your functions work for all types of credit cards.
 // 2. To make it easier to test credit card numbers, create a function that accepts a string and converts it into an array of numbers like the initially provided arrays. (Check the hint for a helpful function)
 // 3. Create a function that will convert invalid numbers into valid numbers.
+
+const toArray = cardNumbers => {
+  const cardNumbersArray = [];
+
+  for(let i = 0; i < cardNumbers.length; i++) {
+    let cardDigit = parseInt(cardNumbers[i]);
+    cardNumbersArray.push(cardDigit);
+    
+  }
+
+  return cardNumbersArray;
+
+}
+
+  
