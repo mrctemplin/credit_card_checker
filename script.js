@@ -31,7 +31,7 @@ const validateCred = arr => {
     // Variable to hold current digit
       let cardDigit = arr[i]; 
       // Alternatively equate to false and true, respectively
-      if((arr.length - 1 - i) % 2 === 1) {
+      if((arr.length - i) % 2 === 0) {
         cardDigit *= 2; 
         if (cardDigit > 9) {
           cardDigit -= 9;
@@ -120,3 +120,8 @@ const idInvalidCardCompanies = arr => {
 console.log(idInvalidCardCompanies([invalid1])); // Should print['visa']
 console.log(idInvalidCardCompanies([invalid2])); // Should print ['mastercard']
 console.log(idInvalidCardCompanies(batch)); // Should print ['Visa', 'Mastercard', 'Amex', 'Discover']
+
+// Next steps:
+// 1. Use different credit card numbers from a credit card number generator and validator site and test if your functions work for all types of credit cards.
+// 2. To make it easier to test credit card numbers, create a function that accepts a string and converts it into an array of numbers like the initially provided arrays. (Check the hint for a helpful function)
+// 3. Create a function that will convert invalid numbers into valid numbers.
